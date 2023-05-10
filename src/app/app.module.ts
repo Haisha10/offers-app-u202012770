@@ -12,12 +12,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 
 //AngularRouter Import
-import { RouterModule } from '@angular/router'
+import { RouterModule } from '@angular/router';
+import { ListOfferComponent } from './list-offer/list-offer.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ListOfferComponent
   ],
   imports: [
     BrowserModule,
