@@ -1,0 +1,61 @@
+<div mat-dialog-title>
+  <h1>Offer Form</h1>
+</div>
+<form [formGroup]="offerForm" (ngSubmit)="onFormSubmit()">
+  <div mat-dialog-content class="content">
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Title</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Title"
+          formControlName="title"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Description"
+          formControlName="description"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Points</mat-label>
+        <input
+          matInput
+          placeholder="Points"
+          type="number"
+          formControlName="points"
+        />
+        <mat-hint>En soles</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Business ID</mat-label>
+        <input
+          matInput
+          placeholder="Business ID"
+          type="number"
+          formControlName="businessId"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+  <div mat-dialog-actions class="action">
+    <button mat-raised-button type="button" [mat-dialog-close]="false">
+      Cancel
+    </button>
+    <button mat-raised-button color="primary" type="submit">
+      {{ data ? "Update" : "Save" }}
+    </button>
+  </div>
+</form>

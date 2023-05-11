@@ -33,3 +33,18 @@ section {
   width: 120px;
 }
 /* Toolbar Ends */
+
+/* Content Header Begins */
+body {
+  padding: 2%;
+}
+
+body .example-button-row {
+  float: right;
+  margin-top: -20px;
+}
+
+.table-filter{
+  width: 100%;
+  margin-top: 1%;
+}

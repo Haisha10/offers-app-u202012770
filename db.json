@@ -1,0 +1,11 @@
+{
+  "artist": [
+    {
+      "id": 1,
+      "title": "Picasso",
+      "description": "Classic art paintings",
+      "points": 79,
+      "businessId": 1
+    }
+  ]
+}
