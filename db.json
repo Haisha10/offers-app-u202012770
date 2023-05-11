@@ -1,11 +1,18 @@
 {
   "artist": [
     {
-      "id": 1,
       "title": "Picasso",
       "description": "Classic art paintings",
       "points": 79,
-      "businessId": 1
+      "businessId": 1,
+      "id": 1
+    },
+    {
+      "title": "DaVinci",
+      "description": "Classic Art Painting",
+      "points": 81,
+      "businessId": 2,
+      "id": 2
     }
   ]
 }

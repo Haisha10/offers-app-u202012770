@@ -9,6 +9,8 @@ import { OfferAddEditComponent } from '../offer-add-edit/offer-add-edit.componen
 import { OfferService } from '../services/offer.service'
 import { SnackBarService } from '../services/snack-bar.service';
 
+import { Location } from '@angular/common';
+
 @Component({
   selector: 'app-list-offer',
   templateUrl: './list-offer.component.html',
@@ -32,7 +34,8 @@ export class ListOfferComponent implements OnInit {
   constructor(
     private _dialog: MatDialog,
     private _offerService: OfferService,
-    private _coreService: SnackBarService
+    private _coreService: SnackBarService,
+    private location: Location
   ) { }
 
   ngOnInit(): void {
@@ -40,11 +43,13 @@ export class ListOfferComponent implements OnInit {
   }
 
   openAddEditOfferForm() {
+    this.location.replaceState('/admin/offers/new');
     const dialogRef = this._dialog.open(OfferAddEditComponent);
     dialogRef.afterClosed().subscribe({
       next: (val) => {
         if (val) {
           this.getOfferList();
+          this.location.replaceState('/business/offers');
         }
       },
     });
@@ -73,7 +78,7 @@ export class ListOfferComponent implements OnInit {
   deleteOffer(id: number) {
     this._offerService.deleteOffer(id).subscribe({
       next: (res) => {
-        this._coreService.openSnackBar('Offer deleted!', 'done');
+        this._coreService.openSnackBar('Offer eliminado con éxtio');
         this.getOfferList();
       },
       error: console.log,
@@ -81,6 +86,7 @@ export class ListOfferComponent implements OnInit {
   }
 
   openEditForm(data: any) {
+    this.location.replaceState(`/admin/offers/edit/${data.id}`);
     const dialogRef = this._dialog.open(OfferAddEditComponent, {
       data,
     });
@@ -89,6 +95,7 @@ export class ListOfferComponent implements OnInit {
       next: (val) => {
         if (val) {
           this.getOfferList();
+          this.location.replaceState('/business/offers');
         }
       },
     });

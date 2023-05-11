@@ -38,7 +38,7 @@ export class OfferAddEditComponent implements OnInit {
           .updateOffer(this.data.id, this.offerForm.value)
           .subscribe({
             next: (val: any) => {
-              this._coreService.openSnackBar(`${this.data.type} actualizado`);
+              this._coreService.openSnackBar('Offer actualizado con éxito');
               this._dialogRef.close(true);
             },
             error: (err: any) => {
@@ -48,7 +48,7 @@ export class OfferAddEditComponent implements OnInit {
       } else {
         this._offerService.addOffer(this.offerForm.value).subscribe({
           next: (val: any) => {
-            this._coreService.openSnackBar(`${this.data.type} añadido`);
+            this._coreService.openSnackBar('Offer añadido con éxito');
             this._dialogRef.close(true);
           },
           error: (err: any) => {

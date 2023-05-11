@@ -36,7 +36,6 @@
           type="number"
           formControlName="points"
         />
-        <mat-hint>En soles</mat-hint>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
@@ -54,7 +53,7 @@
     <button mat-raised-button type="button" [mat-dialog-close]="false">
       Cancel
     </button>
-    <button mat-raised-button color="primary" type="submit">
+    <button mat-raised-button color="warn" type="submit">
       {{ data ? "Update" : "Save" }}
     </button>
   </div>
