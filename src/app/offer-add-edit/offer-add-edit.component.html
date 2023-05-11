@@ -4,7 +4,7 @@
 <form [formGroup]="offerForm" (ngSubmit)="onFormSubmit()">
   <div mat-dialog-content class="content">
     <div class="row">
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline" class="form-field">
         <mat-label>Title</mat-label>
         <input
           matInput
@@ -16,7 +16,7 @@
     </div>
 
     <div class="row">
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline" class="form-field">
         <mat-label>Description</mat-label>
         <input
           matInput
@@ -28,7 +28,7 @@
     </div>
 
     <div class="row">
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline" class="form-field-left">
         <mat-label>Points</mat-label>
         <input
           matInput
@@ -37,8 +37,8 @@
           formControlName="points"
         />
       </mat-form-field>
-
-      <mat-form-field appearance="outline">
+      <span class="form-spacer"></span>
+      <mat-form-field appearance="outline" class="form-field-right">
         <mat-label>Business ID</mat-label>
         <input
           matInput

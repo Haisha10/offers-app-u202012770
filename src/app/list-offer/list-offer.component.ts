@@ -6,7 +6,7 @@ import { MatTableDataSource } from '@angular/material/table';
 
 import { OfferAddEditComponent } from '../offer-add-edit/offer-add-edit.component';
 
-import { OfferService } from '../services/offer.service'
+import { OfferService } from '../services/offer.service';
 import { SnackBarService } from '../services/snack-bar.service';
 
 import { Location } from '@angular/common';

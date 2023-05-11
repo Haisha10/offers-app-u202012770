@@ -2,7 +2,7 @@
   "artist": [
     {
       "title": "Picasso",
-      "description": "Classic art paintings",
+      "description": "Classic Art Painting",
       "points": 79,
       "businessId": 1,
       "id": 1
@@ -10,9 +10,16 @@
     {
       "title": "DaVinci",
       "description": "Classic Art Painting",
-      "points": 81,
+      "points": 82,
       "businessId": 2,
       "id": 2
+    },
+    {
+      "title": "Rembrandt",
+      "description": "Classic Art Painting",
+      "points": 65,
+      "businessId": 2,
+      "id": 3
     }
   ]
 }

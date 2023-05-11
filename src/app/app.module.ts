@@ -21,6 +21,7 @@ import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
+import { MatCardModule } from '@angular/material/card'
 
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -49,6 +50,7 @@ import { RouterModule } from '@angular/router';
     ReactiveFormsModule,
     MatTableModule,
     MatSortModule,
+    MatCardModule,
     HttpClientModule,
     MatSnackBarModule,
     RouterModule

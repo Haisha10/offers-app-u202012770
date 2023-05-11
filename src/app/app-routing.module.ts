@@ -5,7 +5,7 @@ import { ListOfferComponent } from './list-offer/list-offer.component';
 import { OfferAddEditComponent } from './offer-add-edit/offer-add-edit.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/business/offers', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'business/offers', component: ListOfferComponent },
   { path: 'admin/offers/new', component: OfferAddEditComponent },
